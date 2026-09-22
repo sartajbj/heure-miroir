@@ -1126,3 +1126,58 @@
   }
 
 })();
+/* Live countdown to the next double mirror hour */
+(() => {
+  const timeEl = document.getElementById("next-mirror-time");
+  const countdownEl = document.getElementById("next-mirror-countdown");
+  const linkEl = document.getElementById("next-mirror-link");
+
+  if (!timeEl || !countdownEl || !linkEl) return;
+
+  function updateNextMirror() {
+    const now = new Date();
+    let target = null;
+    let hour = null;
+
+    for (let h = 0; h < 24; h++) {
+      const candidate = new Date(now);
+      candidate.setHours(h, h, 0, 0);
+
+      if (candidate > now) {
+        target = candidate;
+        hour = h;
+        break;
+      }
+    }
+
+    if (!target) {
+      target = new Date(now);
+      target.setDate(target.getDate() + 1);
+      target.setHours(0, 0, 0, 0);
+      hour = 0;
+    }
+
+    const diff = Math.max(0, target.getTime() - now.getTime());
+
+    const totalSeconds = Math.floor(diff / 1000);
+    const hoursLeft = Math.floor(totalSeconds / 3600);
+    const minutesLeft = Math.floor((totalSeconds % 3600) / 60);
+    const secondsLeft = totalSeconds % 60;
+
+    const hh = String(hour).padStart(2, "0");
+    const mirror = `${hh}h${hh}`;
+
+    timeEl.textContent = mirror;
+
+    const parts = [];
+    if (hoursLeft > 0) parts.push(`${hoursLeft} h`);
+    if (minutesLeft > 0 || hoursLeft > 0) parts.push(`${minutesLeft} min`);
+    parts.push(`${secondsLeft} s`);
+
+    countdownEl.textContent = `Dans ${parts.join(" ")}`;
+    linkEl.href = `/heure-miroir-${mirror}`;
+  }
+
+  updateNextMirror();
+  setInterval(updateNextMirror, 1000);
+})();
