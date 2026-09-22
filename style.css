@@ -2220,70 +2220,67 @@ a.pattern-card:hover {
   }
 
 }
-/* Next mirror hour */
+/* ======================================================
+   NEXT MIRROR HOUR — FINAL
+====================================================== */
+
 .next-mirror {
+  width: calc(100% - 32px);
   max-width: 720px;
   margin: 32px auto 24px;
-  padding: 24px 26px;
+  padding: 30px 24px 32px;
+  box-sizing: border-box;
+
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 24px;
+  justify-content: center;
+  gap: 0;
+
+  text-align: center;
+
   border: 1px solid rgba(167, 139, 250, 0.28);
   border-radius: 24px;
   background: rgba(17, 26, 51, 0.72);
 }
 
 .next-mirror-copy {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .next-mirror-label {
+  display: block;
+  width: 100%;
+  margin: 0 0 18px;
+
   font-size: 0.76rem;
+  line-height: 1.4;
   font-weight: 800;
   letter-spacing: 0.12em;
+  text-align: center;
+
   color: #c4b5fd;
 }
 
-.next-mirror-time {
-  font-size: 2rem;
-  line-height: 1.1;
-  color: #f6d47b;
-}
+/* ---------- Analog clock ---------- */
 
-.next-mirror-countdown {
-  color: var(--text-muted, #aab2c8);
-}
-
-.next-mirror-link {
-  flex-shrink: 0;
-  font-weight: 700;
-  color: #c4b5fd;
-  text-decoration: none;
-}
-
-.next-mirror-link:hover {
-  text-decoration: underline;
-}
-
-@media (max-width: 600px) {
-  .next-mirror {
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 21px;
-  }
-}
-/* Live analog clock */
 .mirror-clock {
   position: relative;
-  width: 92px;
-  height: 92px;
-  margin: 16px auto 18px;
-  border: 2px solid rgba(196, 181, 253, 0.7);
+  flex: 0 0 auto;
+
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 20px;
+
+  border: 2px solid rgba(196, 181, 253, 0.72);
   border-radius: 50%;
   background: rgba(8, 15, 32, 0.8);
+
   box-shadow:
     0 0 0 6px rgba(139, 92, 246, 0.06),
     0 0 24px rgba(139, 92, 246, 0.14);
@@ -2303,8 +2300,13 @@ a.pattern-card:hover {
   transform: translateX(-50%);
 }
 
-.mark-12 { top: 7px; }
-.mark-6 { bottom: 7px; }
+.mark-12 {
+  top: 8px;
+}
+
+.mark-6 {
+  bottom: 8px;
+}
 
 .mark-3,
 .mark-9 {
@@ -2314,8 +2316,13 @@ a.pattern-card:hover {
   transform: translateY(-50%);
 }
 
-.mark-3 { right: 7px; }
-.mark-9 { left: 7px; }
+.mark-3 {
+  right: 8px;
+}
+
+.mark-9 {
+  left: 8px;
+}
 
 .clock-hand {
   position: absolute;
@@ -2327,118 +2334,122 @@ a.pattern-card:hover {
 
 .clock-hour {
   width: 4px;
-  height: 25px;
+  height: 29px;
   margin-left: -2px;
   background: #f6d47b;
 }
 
 .clock-minute {
   width: 3px;
-  height: 32px;
+  height: 38px;
   margin-left: -1.5px;
   background: #e9e5ff;
 }
 
 .clock-second {
   width: 1px;
-  height: 35px;
+  height: 41px;
   margin-left: -0.5px;
   background: #a78bfa;
 }
 
 .clock-center {
   position: absolute;
-  width: 9px;
-  height: 9px;
+  z-index: 5;
+
+  width: 10px;
+  height: 10px;
   left: 50%;
   top: 50%;
+
   transform: translate(-50%, -50%);
   border-radius: 50%;
+
   background: #f6d47b;
   box-shadow: 0 0 8px rgba(246, 212, 123, 0.45);
 }
-/* ======================================================
-   NEXT MIRROR HOUR — FINAL CENTERED LAYOUT
-====================================================== */
 
-.next-mirror {
-  max-width: 720px;
-  margin: 32px auto 24px;
-  padding: 30px 24px 32px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-
-  text-align: center;
-}
-
-.next-mirror-copy {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  text-align: center;
-}
-
-.next-mirror-label {
-  display: block;
-  width: 100%;
-  margin: 0 0 22px;
-  text-align: center;
-}
-
-.mirror-clock {
-  flex: none;
-  margin: 0 auto 26px;
-}
+/* ---------- Time + countdown ---------- */
 
 .next-mirror-time {
   display: block;
   width: 100%;
-  margin: 0 0 14px;
+  margin: 0;
+
+  font-size: 2.35rem;
+  line-height: 1.15;
+  font-weight: 800;
   text-align: center;
-  font-variant-numeric: tabular-nums;
-  font-feature-settings: "tnum" 1;
+
+  color: #f6d47b;
 }
 
-#next-mirror-countdown {
+.next-mirror-countdown {
   display: block;
 
-  /* Fixed box prevents visible movement while seconds change */
-  width: 260px;
-  max-width: 100%;
-  min-height: 1.5em;
-  margin: 0 auto;
-
-  text-align: center;
-  white-space: nowrap;
+  /* Fixed area prevents movement as numbers change */
+  width: 100%;
+  min-height: 1.7em;
+  margin: 10px 0 0;
 
   font-variant-numeric: tabular-nums;
-  font-feature-settings: "tnum" 1;
+  text-align: center;
+  color: var(--text-muted, #aab2c8);
 }
 
-#next-mirror-link {
+/* ---------- CTA ---------- */
+
+.next-mirror-link {
   display: inline-block;
-  align-self: center;
-  margin: 30px auto 0;
+  flex-shrink: 0;
+
+  margin: 24px auto 0;
+
+  font-weight: 700;
   text-align: center;
+  color: #c4b5fd;
+  text-decoration: none;
 }
+
+.next-mirror-link:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Mobile ---------- */
 
 @media (max-width: 600px) {
   .next-mirror {
-    /* overrides the old mobile flex-start rule */
+    width: calc(100% - 32px);
+    margin: 28px auto 22px;
+    padding: 26px 18px 28px;
+
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    padding: 28px 20px 30px;
+    text-align: center;
   }
 
   .next-mirror-copy {
     align-items: center;
+    text-align: center;
+  }
+
+  .next-mirror-label {
+    text-align: center;
+  }
+
+  .mirror-clock {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .next-mirror-time,
+  .next-mirror-countdown {
+    text-align: center;
+  }
+
+  .next-mirror-link {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
 }
