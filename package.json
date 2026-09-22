@@ -1,0 +1,13 @@
+{
+  "name": "heure-miroir-plus",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Heure Miroir Plus — analyseur et guide des heures miroirs.",
+  "scripts": {
+    "generate": "node generate.js",
+    "build": "node generate.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
