@@ -1,0 +1,101 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 64 64"
+  role="img"
+  aria-labelledby="title"
+>
+  <title id="title">Heure Miroir Plus</title>
+
+  <defs>
+    <linearGradient
+      id="gradient"
+      x1="8"
+      y1="8"
+      x2="56"
+      y2="56"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop offset="0" stop-color="#8B7CFF"/>
+      <stop offset="1" stop-color="#D5B8FF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect
+    x="2"
+    y="2"
+    width="60"
+    height="60"
+    rx="17"
+    fill="#17162D"
+  />
+
+  <rect
+    x="3"
+    y="3"
+    width="58"
+    height="58"
+    rx="16"
+    fill="none"
+    stroke="url(#gradient)"
+    stroke-width="2"
+  />
+
+  <!-- Mirror-hour symbol -->
+  <path
+    d="M17 20
+       H27
+       V44
+       H17
+       M17 32
+       H27"
+    fill="none"
+    stroke="url(#gradient)"
+    stroke-width="4"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <path
+    d="M47 20
+       H37
+       V44
+       H47
+       M37 32
+       H47"
+    fill="none"
+    stroke="url(#gradient)"
+    stroke-width="4"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Colon -->
+  <circle
+    cx="32"
+    cy="27"
+    r="2.2"
+    fill="#FFFFFF"
+  />
+
+  <circle
+    cx="32"
+    cy="37"
+    r="2.2"
+    fill="#FFFFFF"
+  />
+
+  <!-- Sparkle -->
+  <path
+    d="M49 8
+       L50.5 11.5
+       L54 13
+       L50.5 14.5
+       L49 18
+       L47.5 14.5
+       L44 13
+       L47.5 11.5
+       Z"
+    fill="#FFFFFF"
+  />
+</svg>
