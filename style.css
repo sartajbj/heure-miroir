@@ -1592,3 +1592,220 @@ p {
 
   font-size: 0.85rem;
 }
+/* =========================================================
+   CATEGORY PAGES — File #06 support
+   ========================================================= */
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding-top: 20px;
+
+  color: var(--text-muted);
+
+  font-size: 0.82rem;
+}
+
+.breadcrumb a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: var(--text);
+}
+
+.category-page-hero {
+  padding: 58px 0 32px;
+}
+
+.category-page-hero h1 {
+  margin-bottom: 20px;
+}
+
+.category-lead {
+  font-size: 1.05rem;
+}
+
+.category-lead strong {
+  color: var(--text);
+}
+
+.category-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 8px;
+
+  margin-top: 28px;
+}
+
+.category-summary div {
+  padding: 15px 8px;
+
+  border: 1px solid var(--border);
+  border-radius: 14px;
+
+  background: var(--surface);
+
+  text-align: center;
+}
+
+.category-summary strong,
+.category-summary span {
+  display: block;
+}
+
+.category-summary strong {
+  color: var(--gold);
+
+  font-size: 1.15rem;
+}
+
+.category-summary span {
+  margin-top: 2px;
+
+  color: var(--text-muted);
+
+  font-size: 0.7rem;
+}
+
+.category-definition {
+  padding-top: 44px;
+}
+
+.category-definition strong {
+  color: var(--text);
+}
+
+.double-directory {
+  background: rgba(255, 255, 255, 0.012);
+}
+
+.hours-directory-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 10px;
+}
+
+.hour-directory-card {
+  min-height: 112px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 16px;
+
+  border: 1px solid var(--border);
+  border-radius: 15px;
+
+  background: var(--surface);
+
+  color: var(--text);
+  text-decoration: none;
+
+  transition:
+    transform var(--transition),
+    border-color var(--transition),
+    background var(--transition);
+}
+
+.hour-directory-card:hover {
+  transform: translateY(-3px);
+
+  border-color: var(--border-strong);
+  background: var(--surface-soft);
+
+  color: var(--text);
+}
+
+.hour-directory-card strong {
+  margin-bottom: 5px;
+
+  color: var(--gold);
+
+  font-size: 1.35rem;
+  letter-spacing: 0.025em;
+}
+
+.hour-directory-card span {
+  color: var(--text-muted);
+
+  font-size: 0.76rem;
+  line-height: 1.4;
+}
+
+.hour-directory-card.featured-hour {
+  border-color: rgba(167, 139, 250, 0.38);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(167, 139, 250, 0.12),
+      var(--surface)
+    );
+}
+
+.category-analyzer-cta {
+  padding-top: 52px;
+
+  text-align: center;
+}
+
+.category-primary-button {
+  width: auto;
+  margin-top: 4px;
+}
+
+@media (min-width: 640px) {
+
+  .category-page-hero {
+    padding-top: 76px;
+  }
+
+  .category-summary {
+    gap: 12px;
+  }
+
+  .category-summary div {
+    padding: 18px 12px;
+  }
+
+  .category-summary strong {
+    font-size: 1.3rem;
+  }
+
+  .category-summary span {
+    font-size: 0.76rem;
+  }
+
+  .hours-directory-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+}
+
+@media (min-width: 900px) {
+
+  .category-page-hero {
+    padding: 92px 0 42px;
+  }
+
+  .hours-directory-grid {
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+
+    gap: 13px;
+  }
+
+  .hour-directory-card {
+    min-height: 126px;
+    padding: 19px;
+  }
+
+}
