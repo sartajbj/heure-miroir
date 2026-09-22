@@ -1,0 +1,45 @@
+# ==========================================================
+# Heure Miroir Plus
+# Cloudflare Pages redirects
+# ==========================================================
+
+# ----------------------------------------------------------
+# WWW -> canonical non-WWW domain
+# ----------------------------------------------------------
+
+https://www.heuremiroirplus.com/* https://heuremiroirplus.com/:splat 301
+
+
+# ----------------------------------------------------------
+# Core pages: .html -> clean canonical URL
+# ----------------------------------------------------------
+
+/index.html /
+/heures-doubles.html /heures-doubles 301
+/heures-inversees.html /heures-inversees 301
+/heures-triples.html /heures-triples 301
+/heures-sequentielles.html /heures-sequentielles 301
+/toutes-les-heures.html /toutes-les-heures 301
+
+/guide-heures-miroirs.html /guide-heures-miroirs 301
+/pourquoi-heures-miroirs.html /pourquoi-heures-miroirs 301
+/numerologie-heures-miroirs.html /numerologie-heures-miroirs 301
+/psychologie-heures-miroirs.html /psychologie-heures-miroirs 301
+
+/methodologie.html /methodologie 301
+/a-propos.html /a-propos 301
+/contact.html /contact 301
+/confidentialite.html /confidentialite 301
+/mentions-legales.html /mentions-legales 301
+
+
+# ----------------------------------------------------------
+# Generated hour pages: .html -> clean canonical URL
+#
+# Example:
+# /heure-miroir-11h11.html
+# becomes
+# /heure-miroir-11h11
+# ----------------------------------------------------------
+
+/heure-miroir-:heure.html /heure-miroir-:heure 301
