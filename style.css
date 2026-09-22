@@ -1514,3 +1514,81 @@ p {
   }
 
 }
+/* =========================================================
+   SEARCH AUTOCOMPLETE — File #05 support
+   ========================================================= */
+
+.directory-suggestions {
+  position: relative;
+}
+
+.search-suggestion {
+  width: 100%;
+
+  display: grid;
+  gap: 5px;
+
+  padding: 12px 13px;
+
+  border: 1px solid transparent;
+  border-radius: 10px;
+
+  background: transparent;
+  color: var(--text);
+
+  text-align: left;
+
+  transition:
+    background var(--transition),
+    border-color var(--transition);
+}
+
+.search-suggestion:hover,
+.search-suggestion.is-active,
+.search-suggestion[aria-selected="true"] {
+  border-color: var(--border-strong);
+  background: rgba(167, 139, 250, 0.10);
+}
+
+.search-suggestion-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+}
+
+.search-suggestion-main strong {
+  color: var(--gold);
+
+  font-size: 1rem;
+}
+
+.search-suggestion-main span {
+  color: var(--accent-light);
+
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.search-suggestion small {
+  display: block;
+
+  overflow: hidden;
+
+  color: var(--text-muted);
+
+  font-size: 0.76rem;
+  line-height: 1.45;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.search-empty {
+  padding: 12px;
+
+  color: var(--text-muted);
+
+  font-size: 0.85rem;
+}
