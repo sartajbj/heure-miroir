@@ -1,0 +1,60 @@
+# ==========================================================
+# Heure Miroir Plus
+# Cloudflare Pages HTTP headers
+# ==========================================================
+
+
+# ----------------------------------------------------------
+# Global security headers
+# ----------------------------------------------------------
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Cross-Origin-Opener-Policy: same-origin
+
+
+# ----------------------------------------------------------
+# Master generator template
+# Never allow this source template to be indexed.
+# ----------------------------------------------------------
+
+/heure-template.html
+  X-Robots-Tag: noindex, nofollow, noarchive
+
+
+# ----------------------------------------------------------
+# Static JSON database
+# Data file is required by the client-side analyzer/search,
+# but it is not a search-result page.
+# ----------------------------------------------------------
+
+/heures.json
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: public, max-age=3600, must-revalidate
+
+
+# ----------------------------------------------------------
+# JavaScript and CSS
+# Keep crawlable because search engines may need resources
+# to render and understand the pages.
+# ----------------------------------------------------------
+
+/style.css
+  Cache-Control: public, max-age=86400, must-revalidate
+
+/app.js
+  Cache-Control: public, max-age=86400, must-revalidate
+
+/search.js
+  Cache-Control: public, max-age=86400, must-revalidate
+
+
+# ----------------------------------------------------------
+# Long-lived version-independent visual assets
+# ----------------------------------------------------------
+
+/assets/*
+  Cache-Control: public, max-age=604800, must-revalidate
