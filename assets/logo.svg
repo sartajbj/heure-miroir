@@ -1,0 +1,140 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="360"
+  height="72"
+  viewBox="0 0 360 72"
+  role="img"
+  aria-labelledby="logoTitle logoDesc"
+>
+  <title id="logoTitle">Heure Miroir Plus</title>
+  <desc id="logoDesc">
+    Logo Heure Miroir Plus avec symbole de miroir temporel.
+  </desc>
+
+  <defs>
+    <linearGradient
+      id="mirrorGradient"
+      x1="0"
+      y1="0"
+      x2="1"
+      y2="1"
+    >
+      <stop offset="0%" stop-color="#8B7CFF"/>
+      <stop offset="100%" stop-color="#D5B8FF"/>
+    </linearGradient>
+
+    <linearGradient
+      id="textGradient"
+      x1="0"
+      y1="0"
+      x2="1"
+      y2="0"
+    >
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E7E4FF"/>
+    </linearGradient>
+  </defs>
+
+
+  <!-- Brand symbol -->
+  <g transform="translate(6 6)">
+
+    <rect
+      x="0"
+      y="0"
+      width="60"
+      height="60"
+      rx="18"
+      fill="#17162D"
+      stroke="url(#mirrorGradient)"
+      stroke-width="2"
+    />
+
+    <!-- Left mirrored digit -->
+    <path
+      d="M17 19
+         H27
+         V41
+         H17
+         M17 30
+         H27"
+      fill="none"
+      stroke="url(#mirrorGradient)"
+      stroke-width="4"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+    <!-- Mirror divider -->
+    <circle
+      cx="30"
+      cy="25"
+      r="2"
+      fill="#D5B8FF"
+    />
+
+    <circle
+      cx="30"
+      cy="35"
+      r="2"
+      fill="#D5B8FF"
+    />
+
+    <!-- Right mirrored digit -->
+    <path
+      d="M43 19
+         H33
+         V41
+         H43
+         M33 30
+         H43"
+      fill="none"
+      stroke="url(#mirrorGradient)"
+      stroke-width="4"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+    <!-- Small sparkle -->
+    <path
+      d="M48 8
+         L49.7 12.3
+         L54 14
+         L49.7 15.7
+         L48 20
+         L46.3 15.7
+         L42 14
+         L46.3 12.3
+         Z"
+      fill="#FFFFFF"
+    />
+
+  </g>
+
+
+  <!-- Brand name -->
+  <text
+    x="82"
+    y="34"
+    fill="url(#textGradient)"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="25"
+    font-weight="700"
+    letter-spacing="-0.5"
+  >
+    Heure Miroir
+  </text>
+
+  <text
+    x="82"
+    y="55"
+    fill="#B9AEFF"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="17"
+    font-weight="700"
+    letter-spacing="3"
+  >
+    PLUS
+  </text>
+
+</svg>
