@@ -33,7 +33,7 @@
         content="Analysez une heure miroir, inversée ou triple et explorez ses différentes interprétations.">
   <meta name="twitter:image" content="https://heuremiroirplus.com/assets/og-image.webp">
 
-  <link rel="stylesheet" href="/style.css?v=2">
+  <link rel="stylesheet" href="/style.css?v=3">
 
   <!-- Structured data -->
   <script type="application/ld+json">
@@ -163,6 +163,17 @@
 <div class="next-mirror" id="next-mirror" aria-live="polite">
   <div class="next-mirror-copy">
     <span class="next-mirror-label">PROCHAINE HEURE MIROIR</span>
+    <div class="mirror-clock" aria-hidden="true">
+  <span class="clock-mark mark-12"></span>
+  <span class="clock-mark mark-3"></span>
+  <span class="clock-mark mark-6"></span>
+  <span class="clock-mark mark-9"></span>
+
+  <span class="clock-hand clock-hour" id="clock-hour"></span>
+  <span class="clock-hand clock-minute" id="clock-minute"></span>
+  <span class="clock-hand clock-second" id="clock-second"></span>
+  <span class="clock-center"></span>
+</div>
     <strong class="next-mirror-time" id="next-mirror-time">--h--</strong>
     <span class="next-mirror-countdown" id="next-mirror-countdown">
       Calcul en cours…
@@ -765,7 +776,7 @@
   </footer>
 
 
-  <script src="/app.js?v=2" defer></script>
+  <script src="/app.js?v=3" defer></script>
   <script src="/search.js" defer></script>
 
 </body>
