@@ -1809,3 +1809,65 @@ p {
   }
 
 }
+/* =========================================================
+   INVERTED HOURS — File #07 support
+   ========================================================= */
+
+.pattern-comparison {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.pattern-comparison div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 20px 10px;
+
+  border: 1px solid var(--border);
+  border-radius: 16px;
+
+  background: var(--surface);
+
+  text-align: center;
+}
+
+.pattern-comparison span {
+  margin-bottom: 7px;
+
+  color: var(--text-muted);
+
+  font-size: 0.75rem;
+}
+
+.pattern-comparison strong {
+  color: var(--gold);
+
+  font-size: clamp(1.35rem, 5vw, 1.8rem);
+  letter-spacing: 0.04em;
+}
+
+.pattern-comparison small {
+  margin-top: 5px;
+
+  color: var(--accent-light);
+
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+@media (min-width: 640px) {
+
+  .pattern-comparison {
+    gap: 14px;
+  }
+
+  .pattern-comparison div {
+    padding: 25px 15px;
+  }
+
+}
