@@ -131,12 +131,17 @@
 
             <div class="time-input-wrap">
               <input
-                id="heure-input"
-                name="heure"
-                type="time"
-                inputmode="numeric"
-                required
-                aria-describedby="heure-help">
+  id="heure-input"
+  name="heure"
+  type="text"
+  inputmode="numeric"
+  placeholder="11:11"
+  maxlength="5"
+  autocomplete="off"
+  pattern="(?:[01][0-9]|2[0-3]):[0-5][0-9]"
+  required
+  aria-describedby="heure-help"
+  aria-label="Heure au format 24 heures">
             </div>
 
             <p id="heure-help" class="field-help">
