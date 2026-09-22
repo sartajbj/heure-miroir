@@ -1181,3 +1181,26 @@
   updateNextMirror();
   setInterval(updateNextMirror, 1000);
 })();
+/* Live analog clock */
+(() => {
+  const hourHand = document.getElementById("clock-hour");
+  const minuteHand = document.getElementById("clock-minute");
+  const secondHand = document.getElementById("clock-second");
+
+  if (!hourHand || !minuteHand || !secondHand) return;
+
+  function updateMirrorClock() {
+    const now = new Date();
+
+    const seconds = now.getSeconds();
+    const minutes = now.getMinutes() + seconds / 60;
+    const hours = (now.getHours() % 12) + minutes / 60;
+
+    hourHand.style.transform = `rotate(${hours * 30}deg)`;
+    minuteHand.style.transform = `rotate(${minutes * 6}deg)`;
+    secondHand.style.transform = `rotate(${seconds * 6}deg)`;
+  }
+
+  updateMirrorClock();
+  setInterval(updateMirrorClock, 1000);
+})();
