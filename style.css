@@ -2286,42 +2286,38 @@ a.pattern-card:hover {
     0 0 24px rgba(139, 92, 246, 0.14);
 }
 
-.clock-mark {
+.clock-number {
   position: absolute;
-  background: rgba(246, 212, 123, 0.85);
-  border-radius: 2px;
+  z-index: 2;
+  color: #f6d47b;
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
 }
 
-.mark-12,
-.mark-6 {
-  width: 2px;
-  height: 7px;
+.clock-number.mark-12 {
+  top: 8px;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.mark-12 {
-  top: 8px;
-}
-
-.mark-6 {
-  bottom: 8px;
-}
-
-.mark-3,
-.mark-9 {
-  width: 7px;
-  height: 2px;
+.clock-number.mark-3 {
+  right: 9px;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.mark-3 {
-  right: 8px;
+.clock-number.mark-6 {
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.mark-9 {
-  left: 8px;
+.clock-number.mark-9 {
+  left: 9px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .clock-hand {
