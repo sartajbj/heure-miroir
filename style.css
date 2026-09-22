@@ -2273,22 +2273,44 @@ a.pattern-card:hover {
   position: relative;
   flex: 0 0 auto;
 
-  width: 110px;
-  height: 110px;
-  margin: 0 auto 20px;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 22px;
 
-  border: 2px solid rgba(196, 181, 253, 0.72);
+  border: 2px solid rgba(196, 181, 253, 0.82);
   border-radius: 50%;
-  background: rgba(8, 15, 32, 0.8);
+  background: rgba(8, 15, 32, 0.92);
 
   box-shadow:
     0 0 0 6px rgba(139, 92, 246, 0.06),
-    0 0 24px rgba(139, 92, 246, 0.14);
+    0 0 28px rgba(139, 92, 246, 0.16);
+}
+
+.clock-ticks {
+  position: absolute;
+  inset: 5px;
+  border-radius: 50%;
+  background:
+    repeating-conic-gradient(
+      from 0deg,
+      rgba(196, 181, 253, 0.55) 0deg 0.7deg,
+      transparent 0.7deg 6deg
+    );
+
+  -webkit-mask:
+    radial-gradient(circle, transparent 0 62px, #000 63px 100%);
+  mask:
+    radial-gradient(circle, transparent 0 62px, #000 63px 100%);
 }
 
 .clock-number {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
+  width: 24px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #f6d47b;
   font-size: 11px;
   line-height: 1;
@@ -2296,29 +2318,18 @@ a.pattern-card:hover {
   font-variant-numeric: tabular-nums;
 }
 
-.clock-number.mark-12 {
-  top: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.clock-number.mark-3 {
-  right: 9px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.clock-number.mark-6 {
-  bottom: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.clock-number.mark-9 {
-  left: 9px;
-  top: 50%;
-  transform: translateY(-50%);
-}
+.clock-number.n12 { top: 10px; left: 50%; transform: translateX(-50%); }
+.clock-number.n1  { top: 18px; right: 29px; }
+.clock-number.n2  { top: 39px; right: 10px; }
+.clock-number.n3  { top: 50%; right: 5px; transform: translateY(-50%); }
+.clock-number.n4  { bottom: 39px; right: 10px; }
+.clock-number.n5  { bottom: 18px; right: 29px; }
+.clock-number.n6  { bottom: 10px; left: 50%; transform: translateX(-50%); }
+.clock-number.n7  { bottom: 18px; left: 29px; }
+.clock-number.n8  { bottom: 39px; left: 10px; }
+.clock-number.n9  { top: 50%; left: 5px; transform: translateY(-50%); }
+.clock-number.n10 { top: 39px; left: 10px; }
+.clock-number.n11 { top: 18px; left: 29px; }
 
 .clock-hand {
   position: absolute;
@@ -2335,16 +2346,23 @@ a.pattern-card:hover {
   background: #f6d47b;
 }
 
+.clock-hour {
+  width: 4px;
+  height: 38px;
+  margin-left: -2px;
+  background: #f6d47b;
+}
+
 .clock-minute {
   width: 3px;
-  height: 38px;
+  height: 49px;
   margin-left: -1.5px;
   background: #e9e5ff;
 }
 
 .clock-second {
   width: 1px;
-  height: 41px;
+  height: 55px;
   margin-left: -0.5px;
   background: #a78bfa;
 }
