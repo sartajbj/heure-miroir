@@ -14,7 +14,7 @@ https://www.heuremiroirplus.com/* https://heuremiroirplus.com/:splat 301
 # Core pages: .html -> clean canonical URL
 # ----------------------------------------------------------
 
-/index.html /
+/index.html / 301
 /heures-doubles.html /heures-doubles 301
 /heures-inversees.html /heures-inversees 301
 /heures-triples.html /heures-triples 301
