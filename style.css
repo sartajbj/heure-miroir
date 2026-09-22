@@ -2339,12 +2339,7 @@ a.pattern-card:hover {
   border-radius: 999px;
 }
 
-.clock-hour {
-  width: 4px;
-  height: 29px;
-  margin-left: -2px;
-  background: #f6d47b;
-}
+
 
 .clock-hour {
   width: 4px;
