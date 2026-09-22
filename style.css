@@ -1980,3 +1980,243 @@ p {
   }
 
 }
+/* =========================================================
+   SEQUENTIAL HOURS — File #09 support
+   ========================================================= */
+
+.sequence-rule-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 6px;
+
+  margin-top: 26px;
+  padding: 22px 15px;
+
+  border: 1px solid var(--border);
+  border-radius: 16px;
+
+  background: var(--surface);
+
+  text-align: center;
+}
+
+.sequence-rule-box span {
+  color: var(--text-muted);
+
+  font-size: 0.74rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.sequence-rule-box strong {
+  color: var(--gold);
+
+  font-size: clamp(1.4rem, 6vw, 2rem);
+  letter-spacing: 0.08em;
+}
+
+.sequence-rule-box small {
+  color: var(--accent-light);
+
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+
+.sequence-examples-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  gap: 12px;
+}
+
+
+.sequence-example-card {
+  padding: 20px;
+
+  border: 1px solid var(--border);
+  border-radius: 16px;
+
+  background: var(--surface);
+
+  text-align: center;
+}
+
+
+.sequence-example-card.featured-sequence {
+  border-color: rgba(167, 139, 250, 0.4);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(167, 139, 250, 0.12),
+      var(--surface)
+    );
+}
+
+
+.sequence-direction {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: var(--accent-light);
+
+  font-size: 0.72rem;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+
+.sequence-example-card strong {
+  display: block;
+
+  color: var(--gold);
+
+  font-size: 1.6rem;
+}
+
+
+.sequence-example-card p {
+  margin: 6px 0 0;
+
+  color: var(--text-muted);
+
+  font-size: 0.78rem;
+}
+
+
+.taxonomy-note {
+  margin-top: 18px;
+  padding: 17px;
+
+  border: 1px solid var(--border);
+  border-radius: 14px;
+
+  background: var(--surface-soft);
+}
+
+
+.taxonomy-note strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--text);
+}
+
+
+.taxonomy-note p {
+  margin: 0;
+
+  color: var(--text-muted);
+
+  font-size: 0.82rem;
+}
+
+
+.four-pattern-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 10px;
+}
+
+
+.pattern-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 125px;
+
+  padding: 15px;
+
+  border: 1px solid var(--border);
+  border-radius: 15px;
+
+  background: var(--surface);
+
+  color: var(--text);
+  text-align: center;
+  text-decoration: none;
+
+  transition:
+    transform var(--transition),
+    border-color var(--transition);
+}
+
+
+a.pattern-card:hover {
+  transform: translateY(-3px);
+
+  border-color: var(--border-strong);
+
+  color: var(--text);
+}
+
+
+.pattern-card span {
+  margin-bottom: 6px;
+
+  color: var(--text-muted);
+
+  font-size: 0.72rem;
+}
+
+
+.pattern-card strong {
+  color: var(--gold);
+
+  font-size: 1.35rem;
+}
+
+
+.pattern-card small {
+  margin-top: 5px;
+
+  color: var(--accent-light);
+
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+
+.pattern-card.active-pattern {
+  border-color: rgba(167, 139, 250, 0.4);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(167, 139, 250, 0.12),
+      var(--surface)
+    );
+}
+
+
+@media (min-width: 640px) {
+
+  .sequence-examples-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+}
+
+
+@media (min-width: 900px) {
+
+  .four-pattern-grid {
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+  }
+
+}
