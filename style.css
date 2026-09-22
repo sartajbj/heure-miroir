@@ -2357,3 +2357,50 @@ a.pattern-card:hover {
   background: #f6d47b;
   box-shadow: 0 0 8px rgba(246, 212, 123, 0.45);
 }
+/* ======================================================
+   NEXT MIRROR HOUR — CENTER + STABLE COUNTDOWN
+====================================================== */
+
+.next-mirror {
+  text-align: center;
+}
+
+.next-mirror-copy {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.next-mirror-label {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.mirror-clock {
+  margin: 28px auto 30px;
+  flex: 0 0 auto;
+}
+
+.next-mirror-time {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+#next-mirror-countdown {
+  display: block;
+  width: 100%;
+  min-height: 1.5em;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+#next-mirror-link {
+  align-self: center;
+  text-align: center;
+}
