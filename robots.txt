@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Disallow: /heure-template.html
+
+Sitemap: https://heuremiroirplus.com/sitemap.xml
