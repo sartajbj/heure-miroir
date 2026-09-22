@@ -1056,7 +1056,18 @@
         }
       }
     );
+dom.timeInput?.addEventListener("input", () => {
+  const digits = dom.timeInput.value
+    .replace(/\D/g, "")
+    .slice(0, 4);
 
+  if (digits.length <= 2) {
+    dom.timeInput.value = digits;
+  } else {
+    dom.timeInput.value =
+      `${digits.slice(0, 2)}:${digits.slice(2)}`;
+  }
+});
     dom.form?.addEventListener(
       "submit",
       handleAnalyzerSubmit
