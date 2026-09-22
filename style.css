@@ -2275,3 +2275,85 @@ a.pattern-card:hover {
     padding: 21px;
   }
 }
+/* Live analog clock */
+.mirror-clock {
+  position: relative;
+  width: 92px;
+  height: 92px;
+  margin: 16px auto 18px;
+  border: 2px solid rgba(196, 181, 253, 0.7);
+  border-radius: 50%;
+  background: rgba(8, 15, 32, 0.8);
+  box-shadow:
+    0 0 0 6px rgba(139, 92, 246, 0.06),
+    0 0 24px rgba(139, 92, 246, 0.14);
+}
+
+.clock-mark {
+  position: absolute;
+  background: rgba(246, 212, 123, 0.85);
+  border-radius: 2px;
+}
+
+.mark-12,
+.mark-6 {
+  width: 2px;
+  height: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mark-12 { top: 7px; }
+.mark-6 { bottom: 7px; }
+
+.mark-3,
+.mark-9 {
+  width: 7px;
+  height: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.mark-3 { right: 7px; }
+.mark-9 { left: 7px; }
+
+.clock-hand {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform-origin: 50% 100%;
+  border-radius: 999px;
+}
+
+.clock-hour {
+  width: 4px;
+  height: 25px;
+  margin-left: -2px;
+  background: #f6d47b;
+}
+
+.clock-minute {
+  width: 3px;
+  height: 32px;
+  margin-left: -1.5px;
+  background: #e9e5ff;
+}
+
+.clock-second {
+  width: 1px;
+  height: 35px;
+  margin-left: -0.5px;
+  background: #a78bfa;
+}
+
+.clock-center {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #f6d47b;
+  box-shadow: 0 0 8px rgba(246, 212, 123, 0.45);
+}
