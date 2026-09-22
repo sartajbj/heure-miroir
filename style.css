@@ -2220,3 +2220,58 @@ a.pattern-card:hover {
   }
 
 }
+/* Next mirror hour */
+.next-mirror {
+  max-width: 720px;
+  margin: 32px auto 24px;
+  padding: 24px 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border: 1px solid rgba(167, 139, 250, 0.28);
+  border-radius: 24px;
+  background: rgba(17, 26, 51, 0.72);
+}
+
+.next-mirror-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.next-mirror-label {
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #c4b5fd;
+}
+
+.next-mirror-time {
+  font-size: 2rem;
+  line-height: 1.1;
+  color: #f6d47b;
+}
+
+.next-mirror-countdown {
+  color: var(--text-muted, #aab2c8);
+}
+
+.next-mirror-link {
+  flex-shrink: 0;
+  font-weight: 700;
+  color: #c4b5fd;
+  text-decoration: none;
+}
+
+.next-mirror-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .next-mirror {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 21px;
+  }
+}
