@@ -395,26 +395,12 @@ function buildTitle(entry) {
 
 function buildMetaDescription(entry) {
   const time = displayTime(entry.heure);
-  const summary = getSummary(entry);
 
-  let description =
-    `${time} : découvrez sa signification, ses interprétations ` +
-    `en amour, au travail, en numérologie et sa lecture psychologique.`;
-
-  if (summary) {
-    const candidate = `${time} : ${summary}`;
-
-    if (candidate.length >= 80 && candidate.length <= 160) {
-      description = candidate;
-    }
-  }
-
-  if (description.length > 160) {
-    description =
-      description.slice(0, 157).replace(/\s+\S*$/, "") + "...";
-  }
-
-  return description;
+  return (
+    `${time} : découvrez la signification de cette heure miroir ` +
+    `en amour, en numérologie, ainsi que ses lectures symbolique ` +
+    `et psychologique.`
+  );
 }
 
 
