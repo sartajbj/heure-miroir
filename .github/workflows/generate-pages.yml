@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - seo/topical-cluster-layout-fixes
+      - main
 
 permissions:
   contents: write
