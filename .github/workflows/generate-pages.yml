@@ -4,7 +4,13 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - seo/topical-cluster-layout-fixes
+      - main
+    paths:
+      - 'heures.json'
+      - 'heure-template.html'
+      - 'generate.js'
+      - 'package.json'
+      - '.github/workflows/generate-pages.yml'
 
 permissions:
   contents: write
