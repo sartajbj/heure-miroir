@@ -2,6 +2,9 @@ name: Generate Mirror Hour Pages
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - seo/topical-cluster-layout-fixes
 
 permissions:
   contents: write
