@@ -259,7 +259,7 @@ p {
 
 .section {
   position: relative;
-  padding: 44px 0;
+  padding: 36px 0;
 }
 
 .section-heading {
@@ -427,8 +427,7 @@ p {
 .hero {
   position: relative;
   overflow: hidden;
-
-  padding: 78px 0 58px;
+  padding: 58px 0 44px;
 
   text-align: center;
 }
@@ -519,7 +518,7 @@ p {
   position: relative;
 }
 
-.heure-form input[type="time"] {
+.heure-form input[type="text"] {
   width: 100%;
 
   min-height: 70px;
@@ -546,11 +545,11 @@ p {
     background var(--transition);
 }
 
-.heure-form input[type="time"]:hover {
+.heure-form input[type="text"]:hover {
   border-color: rgba(167, 139, 250, 0.35);
 }
 
-.heure-form input[type="time"]:focus {
+.heure-form input[type="text"]:focus {
   border-color: var(--accent);
 
   background: rgba(9, 13, 29, 0.92);
@@ -1343,7 +1342,7 @@ p {
   }
 
   .hero {
-    padding-top: 96px;
+    padding-top: 78px;
   }
 
   .analyzer-card {
@@ -1382,7 +1381,7 @@ p {
 @media (min-width: 900px) {
 
   .section {
-    padding: 94px 0;
+    padding: 64px 0;
   }
 
   .header-inner {
@@ -1413,7 +1412,7 @@ p {
   }
 
   .hero {
-    padding: 118px 0 80px;
+    padding: 88px 0 64px;
   }
 
   .hero-intro {
@@ -1618,7 +1617,7 @@ p {
 }
 
 .category-page-hero {
-  padding: 58px 0 32px;
+  padding: 42px 0 24px;
 }
 
 .category-page-hero h1 {
@@ -1673,7 +1672,7 @@ p {
 }
 
 .category-definition {
-  padding-top: 44px;
+  padding-top: 30px;
 }
 
 .category-definition strong {
