@@ -5,6 +5,12 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'heures.json'
+      - 'heure-template.html'
+      - 'generate.js'
+      - 'package.json'
+      - '.github/workflows/generate-pages.yml'
 
 permissions:
   contents: write
